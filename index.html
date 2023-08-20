@@ -73,6 +73,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-函数.始作用域" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/08/20/%E5%87%BD%E6%95%B0.%E5%A7%8B%E4%BD%9C%E7%94%A8%E5%9F%9F/" class="article-date">
+  <time class="dt-published" datetime="2023-08-20T02:27:59.535Z" itemprop="datePublished">2023-08-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h5 id="函数，始作用域"><a href="#函数，始作用域" class="headerlink" title="函数，始作用域"></a>函数，始作用域</h5><h6 id="function"><a href="#function" class="headerlink" title="function"></a>function</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">函数声明</span><br><span class="line">function name()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">name();//执行函数</span><br><span class="line"></span><br><span class="line">表达式定义方式</span><br><span class="line">1. 命名表达方式</span><br><span class="line">var name = function abc()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2.匿名表达式 ----- 函数表达式</span><br><span class="line">var name = function()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;//常用</span><br></pre></td></tr></table></figure>
+
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">形参--&gt;形式参数</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">实参--&gt;实际参数</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function sum(a)//形参写这里&#123;</span><br><span class="line">    //arguments -- [11,2,3] 实参列表</span><br><span class="line">&#125;</span><br><span class="line">sum(11,2,3);//实参写这里</span><br><span class="line"></span><br><span class="line">使用方法</span><br><span class="line">function sum(a,b,c)&#123;</span><br><span class="line">    console.log(a,b,c);</span><br><span class="line">&#125;</span><br><span class="line">sum(11,2,3);</span><br><span class="line">打印结果(11,2,3).</span><br></pre></td></tr></table></figure>
+<hr>
+<h6 id="小练习求和"><a href="#小练习求和" class="headerlink" title="小练习求和"></a>小练习求和</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function sum()&#123;</span><br><span class="line">		var resule = 0;</span><br><span class="line">		for (var i = 0; i &lt; arguments.length; i++)&#123;</span><br><span class="line">			resule += arguments[i];</span><br><span class="line">		&#125;</span><br><span class="line">			console.log(resule);</span><br><span class="line">	&#125;</span><br><span class="line">	sum(1,2,3,4,5,6,7,8,9);</span><br><span class="line">	结果为45</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/08/20/%E5%87%BD%E6%95%B0.%E5%A7%8B%E4%BD%9C%E7%94%A8%E5%9F%9F/" data-id="cllity0jr0000v8vmb7jb3v2c" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-数组去重三种方法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/08/20/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/" class="article-date">
@@ -471,6 +516,10 @@
       <ul>
         
           <li>
+            <a href="/2023/08/20/%E5%87%BD%E6%95%B0.%E5%A7%8B%E4%BD%9C%E7%94%A8%E5%9F%9F/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2023/08/20/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/">(no title)</a>
           </li>
         
@@ -484,10 +533,6 @@
         
           <li>
             <a href="/2023/08/20/typeof,%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2023/08/20/%E9%80%92%E5%BD%92%EF%BC%8C%E9%A2%84%E7%BC%96%E8%AF%91/">(no title)</a>
           </li>
         
       </ul>
