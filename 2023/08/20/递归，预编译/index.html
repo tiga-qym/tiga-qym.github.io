@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="递归1234567891011&#x2F;&#x2F;递归求n的阶乘function mul(n)&amp;#123;    if(n &#x3D;&#x3D; 1)&amp;#123;        return 1;    &amp;#125;&#x2F;&#x2F;出口    return n * mul(n - 1);&amp;#125;&#x2F;&#x2F;mul(5) &#x3D;&#x3D;&gt; 5 * mul(4)&#x2F;&#x2F;mul(4) &#x3D;&#x3D;&gt; 4 * mul(3)&#x2F;&#x2F;mul(3) &#x3D;&#x3D;&gt; 3 *">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/08/20/%E9%80%92%E5%BD%92%EF%BC%8C%E9%A2%84%E7%BC%96%E8%AF%91/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="递归1234567891011&#x2F;&#x2F;递归求n的阶乘function mul(n)&amp;#123;    if(n &#x3D;&#x3D; 1)&amp;#123;        return 1;    &amp;#125;&#x2F;&#x2F;出口    return n * mul(n - 1);&amp;#125;&#x2F;&#x2F;mul(5) &#x3D;&#x3D;&gt; 5 * mul(4)&#x2F;&#x2F;mul(4) &#x3D;&#x3D;&gt; 4 * mul(3)&#x2F;&#x2F;mul(3) &#x3D;&#x3D;&gt; 3 *">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-08-20T00:55:11.416Z">
+<meta property="article:modified_time" content="2023-08-20T00:55:12.673Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-递归，预编译" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/08/20/%E9%80%92%E5%BD%92%EF%BC%8C%E9%A2%84%E7%BC%96%E8%AF%91/" class="article-date">
+  <time class="dt-published" datetime="2023-08-20T00:55:11.416Z" itemprop="datePublished">2023-08-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h5 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//递归求n的阶乘</span><br><span class="line">function mul(n)&#123;</span><br><span class="line">    if(n == 1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;//出口</span><br><span class="line">    return n * mul(n - 1);</span><br><span class="line">&#125;</span><br><span class="line">//mul(5) ==&gt; 5 * mul(4)</span><br><span class="line">//mul(4) ==&gt; 4 * mul(3)</span><br><span class="line">//mul(3) ==&gt; 3 * mul(2)</span><br><span class="line">//mul(2) ==&gt; 2 * mul(1)此时n = 1 return 1 mul = 1</span><br></pre></td></tr></table></figure>
+<p>过程</p>
+<ol>
+<li>找规律</li>
+<li>找出口</li>
+</ol>
+<h5 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h5><p>预编译发生在函数执行的前一刻</p>
+<ol>
+<li>创建AO对象（执行期上下文）</li>
+<li>找形参和变量声明，把形参和变量声明的名变为AO对象的属性名，值为undefined</li>
+<li>将实参和形参统一</li>
+<li>在函数体里面找函数声明，值赋予函数体</li>
+</ol>
+<p>任何全局变量都是window<br>全局预编译去除第三步第一步为AO</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/08/20/%E9%80%92%E5%BD%92%EF%BC%8C%E9%A2%84%E7%BC%96%E8%AF%91/" data-id="clliqnlx300044kvmg9xp3ic6" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/08/20/typeof,%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/08/20/%E9%A2%84%E7%BC%96%E8%AF%91/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/08/20/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/20/%E6%95%B0%E7%BB%84%E4%B8%8E%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/20/javascript%E5%85%A5%E9%97%A8/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/20/typeof,%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/20/%E9%80%92%E5%BD%92%EF%BC%8C%E9%A2%84%E7%BC%96%E8%AF%91/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

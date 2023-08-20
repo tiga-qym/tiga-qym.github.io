@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="相对于传统的position丶float布局来说flex布局使用起来就方便了很多，flex布局将成为未来布局的首选方案。因为markdown需要会员上传图片才方便，做为穷逼的我。。只能不用图片写一些基础语法。 基本概念首先得有一个容器，给容器设置display：flex属性，那么它的所有子元素将会成为容器的成员。例如： 12345678910&lt;div id &#x3D; &quot;demo&amp;quot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/08/20/flex%E5%B8%83%E5%B1%80/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="相对于传统的position丶float布局来说flex布局使用起来就方便了很多，flex布局将成为未来布局的首选方案。因为markdown需要会员上传图片才方便，做为穷逼的我。。只能不用图片写一些基础语法。 基本概念首先得有一个容器，给容器设置display：flex属性，那么它的所有子元素将会成为容器的成员。例如： 12345678910&lt;div id &#x3D; &quot;demo&amp;quot">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-08-20T00:54:53.374Z">
+<meta property="article:modified_time" content="2023-08-20T00:54:54.758Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-flex布局" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/08/20/flex%E5%B8%83%E5%B1%80/" class="article-date">
+  <time class="dt-published" datetime="2023-08-20T00:54:53.374Z" itemprop="datePublished">2023-08-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>相对于传统的position丶float布局来说flex布局使用起来就方便了很多，flex布局将成为未来布局的首选方案。因为markdown需要会员上传图片才方便，做为穷逼的我。。只能不用图片写一些基础语法。</p>
+<h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><p>首先得有一个容器，给容器设置display：flex属性，那么它的所有子元素将会成为容器的成员。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id = &quot;demo&quot;&gt;</span><br><span class="line">  &lt;div class = &quot;inner&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class = &quot;inner&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class = &quot;inner&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class = &quot;inner&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">CSS</span><br><span class="line">#demo&#123;</span><br><span class="line">    display:flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里的inner就成为了flex项目成员。</p>
+<h4 id="容器的属性"><a href="#容器的属性" class="headerlink" title="容器的属性"></a>容器的属性</h4><p>flex-direction：row | row-reverse |  column | column-reverse;决定主轴的方向</p>
+<p>flex-wrap：nowrap | wrap | wrap-reverse;当项目在主轴上装不下的时候的换行方式</p>
+<p>flex-flow：<flex-direction> || <flex-wrap>;flex-direction属性和flex-wrap属性的简写形式，默认 row nowrap。</p>
+<p>justify-content：flex-start | flex-end | center | space-between |space-around;项目在主轴上的对齐方式</p>
+<p>align-items：flex-start | flex-end | center |baseline | stretch;定义项目在交叉轴上如何对齐。</p>
+<p>align-content：flex-start | flex-end | center | spance-between | space-around |stretch;定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</p>
+<h4 id="项目的属性"><a href="#项目的属性" class="headerlink" title="项目的属性"></a>项目的属性</h4><p>order 定义项目的排列顺序。数值越小，排列越靠前，默认为0.</p>
+<p>flex-grow 属性定义项目的放大比例，默认值为0，即如果存在剩余空间，也不放大。如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目为1，则牵着占据的剩余空间将比其他项多一倍</p>
+<p>flex-shrink 定义了项目的缩小比例，默认为1，即如果空间不足，改项目将缩小。</p>
+<p>flex-basis 在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。</p>
+<p>flex flex属性是flex-grow，flex-shrink和flex-basis的简写，默认值为0 1 auto。后面两个属性可选</p>
+<p>align-self 允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，等同于stretch。该属性可能取6个值，除了auto，其他都与align-items属性完全一致。</p>
+<p>参考博客链接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/dreamperson/p/9367008.html">https://www.cnblogs.com/dreamperson/p/9367008.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/08/20/flex%E5%B8%83%E5%B1%80/" data-id="clliqnfj100024kvmebff5epc" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/08/20/%E9%A2%84%E7%BC%96%E8%AF%91/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/04/19/ajax1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ajax1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/08/20/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/20/%E6%95%B0%E7%BB%84%E4%B8%8E%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/20/javascript%E5%85%A5%E9%97%A8/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/20/typeof,%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/08/20/%E9%80%92%E5%BD%92%EF%BC%8C%E9%A2%84%E7%BC%96%E8%AF%91/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
