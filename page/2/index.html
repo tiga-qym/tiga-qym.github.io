@@ -73,6 +73,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-预编译" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/08/20/%E9%A2%84%E7%BC%96%E8%AF%91/" class="article-date">
+  <time class="dt-published" datetime="2023-08-20T00:55:03.869Z" itemprop="datePublished">2023-08-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h5 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h5><h6 id="JS执行三部曲"><a href="#JS执行三部曲" class="headerlink" title="JS执行三部曲"></a>JS执行三部曲</h6><ol>
+<li>语法分析(通篇扫描)</li>
+<li>预编译</li>
+<li>解释执行</li>
+</ol>
+<p>&#x2F;&#x2F;预编译</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">text = a;</span><br><span class="line">function test()&#123;</span><br><span class="line">    console.log(a);</span><br><span class="line">&#125;</span><br><span class="line">能执行是由于预编译影响</span><br></pre></td></tr></table></figure>
+<p>&#x2F;&#x2F;函数声明集体提升</p>
+<p>&#x2F;&#x2F;变量 声明提升</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">console.log(text);</span><br><span class="line">function text()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">console.log(a);</span><br><span class="line">var a = 123;</span><br><span class="line">打印结果为 function text 和 undefined</span><br><span class="line"></span><br><span class="line">预编译后</span><br><span class="line">function text()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line">var a;</span><br><span class="line">console.log(text);</span><br><span class="line">console.log(a);</span><br><span class="line">a = 123;</span><br></pre></td></tr></table></figure>
+
+<p>预编译前奏</p>
+<ol>
+<li>imply global暗示全局变量，如果变量未经声明就赋值，此变量就为全局对象所有。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = 123；</span><br><span class="line">var = a = b = 123;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>一切声明的全局变量，全是window的属性</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var a = 123;===&gt;window.a = 123;</span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/08/20/%E9%A2%84%E7%BC%96%E8%AF%91/" data-id="clliqnnvo00054kvmau649h6m" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-flex布局" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/08/20/flex%E5%B8%83%E5%B1%80/" class="article-date">
@@ -186,7 +237,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
     </div>
   </div>
 
@@ -197,6 +248,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/09/14/%E5%85%83%E7%B4%A0/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2024/02/26/html%E5%BC%95%E7%94%A8css%E5%92%8Cjs/">(no title)</a>
@@ -212,10 +267,6 @@
         
           <li>
             <a href="/2023/08/20/%E5%87%BD%E6%95%B0.%E5%A7%8B%E4%BD%9C%E7%94%A8%E5%9F%9F/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2023/08/20/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/">(no title)</a>
           </li>
         
       </ul>
